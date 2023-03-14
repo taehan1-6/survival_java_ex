@@ -5,7 +5,7 @@ public class Wizard {
     private int mp;
     private String name;
     private Wand wand;
-    
+
 
     public int getHp() {
         return hp;
@@ -50,9 +50,13 @@ public class Wizard {
         return wand;
     }
     
-    public void setWand(String name, double power) {
-        wand.setName(name);
-        wand.setPower(power);
+    public void setWand(Wand wand) {
+        if (wand == null) {
+            throw new IllegalArgumentException("지팡이는 null이 아니어야 함");
+        }
+        
+        wand.setName(wand.getName());
+        wand.setPower(wand.getPower());
     }
     
     
