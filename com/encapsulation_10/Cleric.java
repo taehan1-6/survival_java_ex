@@ -1,16 +1,16 @@
-package com.class_9;
+package com.encapsulation_10;
 
 import java.util.Random;
 
 public class Cleric {
-    String name;
+    private String name;
 
-    static final int MAX_HP = 50;
-    static final int MAX_MP = 10;
+    public static final int MAX_HP = 50;
+    public static final int MAX_MP = 10;
 
-    int hp;
-    int mp;
-    int mpRecovery = new Random().nextInt(3);
+    private int hp;
+    private int mp;
+    private int mpRecovery = new Random().nextInt(3);
 
 
     Cleric(String name) {
@@ -26,6 +26,15 @@ public class Cleric {
         this.hp = hp;
         this.mp = mp;
     }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
 
     void selfAid() {
         if (mp < 5) {

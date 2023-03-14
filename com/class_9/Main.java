@@ -1,5 +1,7 @@
 package com.class_9;
 
+import com.class_9.Cleric;
+
 public class Main {
     public static void main(String[] args) {
         Cleric cleric = new Cleric("경민용사", 10, 5);
