@@ -1,4 +1,4 @@
-package com.encapsulation_10;
+package com.inheritance_11;
 
 public class Hero {
     // field variable
@@ -38,8 +38,11 @@ public class Hero {
     }
 
     public void setHp(int hp) {
- 
-        this.hp = hp;
+        if (this.hp < 0) {
+            throw new IllegalArgumentException("이미 사망한 상태. hp가 0입니다.");
+        } else {
+            this.hp = hp;
+        }
     }
 
     void attack() {}
