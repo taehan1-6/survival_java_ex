@@ -6,5 +6,4 @@ public interface Thing {
 
     public abstract void setWeight(double weight);
 
-
 }

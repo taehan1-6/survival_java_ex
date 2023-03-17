@@ -7,6 +7,17 @@ public class Weapon extends Item {
         // TODO Auto-generated constructor stub
     }
 
+    public Weapon(String name) {
+        super(name);
+        // TODO Auto-generated constructor stub
+    }
+    
+    public Weapon() {
+        super();
+    }
+
+    
+
     
     
 }

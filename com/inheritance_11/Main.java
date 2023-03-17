@@ -2,48 +2,11 @@ package com.inheritance_11;
 
 public class Main {
     public static void main(String[] args) {
-        PoisonKinoko poisonKinokoA = new PoisonKinoko('A');
-        System.out.println(poisonKinokoA.getSuffix());
-        System.out.println(poisonKinokoA.getSkillPoint());
+        Weapon weapon = new Weapon("ddd");
+        System.out.println(weapon.getName());
         
-        Hero hero = new Hero(40);
-        System.out.println(hero.getHp());
-        System.out.println();
-        
-        poisonKinokoA.attack(hero);
-        System.out.println(poisonKinokoA.getSkillPoint());
-        System.out.println(hero.getHp());
-        System.out.println();
-        
-        poisonKinokoA.attack(hero);
-        System.out.println(poisonKinokoA.getSkillPoint());
-        System.out.println(hero.getHp());
-        System.out.println();
-        
-        poisonKinokoA.attack(hero);
-        System.out.println(poisonKinokoA.getSkillPoint());
-        System.out.println(hero.getHp());
-        System.out.println();
-        
-        poisonKinokoA.attack(hero);
-        System.out.println(poisonKinokoA.getSkillPoint());
-        System.out.println(hero.getHp());
-        System.out.println();
-        
-        poisonKinokoA.attack(hero);
-        System.out.println(poisonKinokoA.getSkillPoint());
-        System.out.println(hero.getHp());
-        System.out.println();
-        
-//        poisonKinokoA.attack(hero);
-//        System.out.println(poisonKinokoA.getSkillPoint());
-//        System.out.println(hero.getHp());
-//        System.out.println();
-        
-//        poisonKinokoA.attack(hero);
-//        System.out.println(poisonKinokoA.getSkillPoint());
-//        System.out.println(hero.getHp());
-//        System.out.println();
-        
+        Weapon weapon1 = new Weapon();
+        System.out.println(weapon1.getName());
+        System.out.println(weapon1.getPrice());
     }
 }
