@@ -5,11 +5,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-class Pokect<T> {
+class Pokect<T extends Character> {
     private T data;
 
     public Pokect(T data) {
-        super();
         this.data = data;
     }
 
@@ -53,19 +52,24 @@ class Pokect<T> {
 }
 
 
-public class Main2 {
+public class UseGeneric {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("박경덕");
         list.add("이경덕");
         list.add("오경덕");
         list.add("김경덕");
-        
-//        Collections.sort(list);
-        
+
+        // Collections.sort(list);
+
         list.sort(null);
-        
+
         System.out.println(list);
-        
+
+
+//        Pokect<Integer> p1 = new Pokect(1);
+        Pokect<Character> p2 = new Pokect('1');
+  
+
     }
 }
