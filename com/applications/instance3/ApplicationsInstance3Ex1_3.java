@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 
-class Book implements Comparable<Book> {
+class Book implements Comparable<Book>, Cloneable {
     private String title;
     private Date publishDate;
     private String comment;
@@ -72,9 +72,10 @@ class Book implements Comparable<Book> {
         return this.publishDate.compareTo(o.publishDate);
     }
     
-    // 굳이 Clonable인터페이스를 구현받을 필요 없이, clone메소드를 만들어줄 필요없이
+    // 굳이 Cloneable인터페이스를 구현받을 필요 없이, clone메소드를 만들어줄 필요없이
     // 직접 copy()라는 메소드를 만들어주어 사용하면 된다.
-    public Book copy() {
+    // 그래도 관행적으로 Cloneable 인터페이스를 사용하고 clone()메소드를 만들어 사용해주자
+    public Book clone() {
         Book result = new Book();
         result.title = this.title;
         // 깊은 복사를 위해 Date 클래스의 clone메소드를 사용함.
@@ -102,7 +103,7 @@ public class ApplicationsInstance3Ex1_3 {
         Book book2 = new Book("반지의 제왕", new Date(12312), "asdasds");
 
         
-        Book book3 = book1.copy();
+        Book book3 = book1.clone();
         
         System.out.println(book1);
         System.out.println(book2);

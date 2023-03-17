@@ -69,6 +69,9 @@ public class Ex2 {
         // 2. 계좌번호가 같으면 값이 같은 것으로 판단할 것. 단, “ 4649” 처럼 계좌번호의 앞에
         // 공백이 있으면, 공백을 무시하고 비교할 것 (“4649”와 “ 4649 ”는 같은 것으로 본다)
         // (힌트 : java.lang.String 클래스의 trim() 메소드를 이용)
+        Account b = new Account("    4649", 1111);
+        
+        System.out.println(a.equals(b));
         
         
     }
