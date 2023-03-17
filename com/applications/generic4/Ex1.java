@@ -5,8 +5,11 @@ enum KeyType {
     BUTTON(10000),
     DIAL(30000),
     FINGER(1000000);
-
+    
+    // 필드변수
     int count;
+    
+    // 생성자
     KeyType(int count) {
         // TODO Auto-generated constructor stub
         this.count = count;
