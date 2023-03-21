@@ -1,6 +1,7 @@
 package com.applications.unittest10;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import org.junit.Test;
 
 class Bank {
@@ -29,6 +30,16 @@ public class Ex1 {
         bank.setName("하나뱅크");
         
         assertEquals("하나뱅크", bank.getName());
-        
     }
+    
+    @Test
+    public void IllegalArgumentException_테스트() {
+        IllegalArgumentException illegal =
+                assertThrows(IllegalArgumentException.class, () -> new Bank().setName("하나뱅크"));
+        
+        String message = illegal.getMessage();
+        assertEquals("이름이 잘못 되었음", message);
+    }
+    
+    
 }
